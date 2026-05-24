@@ -1,0 +1,278 @@
+head {
+    font-family: Times New Roman;
+    font-size: 20px;
+}
+
+body {
+    padding-top: 100px;
+    background-color: #223F96;
+}
+
+#banner {
+    font-family: Times New Roman;
+    font-size: 30px;
+    background-color: black;
+    color: #ffffff;
+    height: 100px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    z-index: 100;
+}
+
+#banner-text {
+    text-align: center;
+    flex: 1;
+}
+
+#banner-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+
+h2 {
+    font-family: Times New Roman;
+    font-size: 30px;
+    text-align: center;
+    color: #f2f2f2;
+    border-width: fill;
+    top: 25px;
+    border-color:#000000;
+    position: relative;
+}
+
+.practice-room-nav nav {
+    top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(10px, 3vw, 120px);
+    position: relative;
+}
+
+.nav-button {
+    background-color: transparent;
+    font-size: 20px;
+    color: #f2f2f2;
+    text-decoration: underline;
+    border-style: none;
+    padding: 0;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+#Averages {
+    font-size: 25px;
+    text-align: center;
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    position: relative;
+}
+
+@media (max-width: 900px) {
+     #banner {
+        padding-left: 100px;
+    }
+
+    .practice-room-nav nav {
+        gap: clamp(5px, 2vw, 60px);
+    }
+}
+
+@media (max-width: 600px) {
+    #Averages {
+        font-size: 16px;
+        width: 98%;
+    }
+
+     .nav-button {
+        font-size: 14px;
+    }
+
+    #banner-text {
+        font-size: 20px;
+    }
+
+    #banner {
+        font-size: 20px;
+    }
+    
+    .practice-room-nav {
+        display: none;
+    }
+}
+
+#table-wrapper {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#table-wrapper::before {
+   content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url(Guyer__TX__Wildcats_Logo.png);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+    opacity: .15;
+    pointer-events: none;
+    z-index: 1;
+    rotate: 90deg;
+}
+
+.one, .two, .three, .Table-Header {
+    background-color: rgba(245, 245, 245, 1);
+    color: #223F96;
+    font-weight: bold;
+}
+
+td {
+    padding: 16px 8px;
+    position: relative;
+    vertical-align: center;
+}
+
+td:empty::before {
+    content: "N/A";
+    color: 223F96;
+    font-style: italic;
+}
+
+td:first-child {
+    padding-left: 45px; /* pushes the club name text to the right */
+}
+
+.delete-row {
+    position: absolute;
+    left: 6px;
+    top: 50%;
+    transform: translateY(-50%); /* keeps it vertically centered in the row */
+    background-color: transparent;
+    border: 1px solid #223F96;
+    color: #223F96;
+    border-radius: 4px;
+    width: 22px;
+    height: 22px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.one td:first-child::after,
+.two td:first-child::after,
+.three td:first-child::after {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    right: -58%;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.4);
+}
+
+th {
+    padding: 16px 8px;
+}
+
+#Title-Logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 100px;
+    min-width: 100px;
+    background-image: url(Black_Wildcat-Logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: #B2B2B2;
+}
+    
+#Logo-Button {
+   background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+
+/* Off-screen menu */
+
+.off-screen-menu {
+    background-color: #223F96;
+    height: 100vh;
+    width: 100%;
+    max-width: 300px;
+    position: fixed;
+    top: 0;
+    right: -450px; /* Start off-screen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+    animation: .3s ease;
+}
+
+.off-screen-menu.active {
+    right: 0; /* Slide in */
+}
+
+.add-club {
+    position: absolute;
+    left: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #223F96;
+    border: none;
+    color: #ffffff;
+    border-radius: 4px;
+    width: 22px;
+    height: 22px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.club-input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #223F96;
+    color: #223F96;
+    font-family: Times New Roman;
+    font-size: 20px;
+    font-weight: bold;
+    width: 70%;
+    outline: none;
+}
+
+.club-input::placeholder {
+    color: #223F96;
+    opacity: 0.5;
+    font-style: italic;
+}
+
+#add-Club {
+    grid-row: horizontal;
+    background-color: #f2f2f2;
+}
+

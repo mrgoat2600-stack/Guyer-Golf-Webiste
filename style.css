@@ -92,7 +92,7 @@ h2 {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     #Averages {
         font-size: 16px;
         width: 98%;
@@ -103,11 +103,11 @@ h2 {
     }
 
     #banner-text {
-        font-size: 20px;
+        font-size: 35px;
     }
 
     #banner {
-        font-size: 20px;
+        font-size: 35px;
     }
     
     .practice-room-nav {

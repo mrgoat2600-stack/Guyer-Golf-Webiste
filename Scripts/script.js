@@ -88,6 +88,33 @@ document.querySelector('#Averages').addEventListener('click', (e) => {
     }
 });
 
+        const Home = document.getElementById('Home');
+        const PracRoom = document.getElementById('Practice-Room');
+        const Rotations = document.getElementById('Rotations');
+        const DistanceInputs = document.getElementById('Distance-Inputs');
+        const SpeedInputs = document.getElementById('Speed-Inputs');
+        
+DistanceInputs.addEventListener('click', () => {
+        window.location.href = '/html/Distance.html';
+});
+
+PracRoom.addEventListener('click', () => {
+        window.location.href = '/html/index.html';
+});
+
+Home.addEventListener('click', () => {
+        window.location.href = '/html/Home.html';
+});
+
+Rotations.addEventListener('click', () => {
+        window.location.href = '/html/Rotations.html';
+});
+
+SpeedInputs.addEventListener('click', () => {
+        window.location.href = '/html/Speed.html';
+});
+
+
 
 
 

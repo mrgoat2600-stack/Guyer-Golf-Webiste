@@ -128,7 +128,7 @@ h2 {
    content: '';
     position: absolute;
     inset: 0;
-    background-image: url(Guyer__TX__Wildcats_Logo.png);
+    background-image: url(/Images/Guyer__TX__Wildcats_Logo.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -199,7 +199,7 @@ th {
     width: 100px;
     height: 100px;
     min-width: 100px;
-    background-image: url(Black_Wildcat-Logo.png);
+    background-image: url(/Images/Black_Wildcat-Logo.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;

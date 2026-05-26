@@ -99,7 +99,7 @@ DistanceInputs.addEventListener('click', () => {
 });
 
 PracRoom.addEventListener('click', () => {
-        window.location.href = '/html/index.html';
+        window.location.href = 'index.html';
 });
 
 Home.addEventListener('click', () => {

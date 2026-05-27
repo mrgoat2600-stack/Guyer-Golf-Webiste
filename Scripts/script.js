@@ -18,6 +18,7 @@ let clubs = [
 
 function renderTable() {
  const addClubRow = document.getElementById('add-Club');
+ if (!addClubRow) return;
     const tbody = addClubRow.parentNode;
 
     // clear existing rows first
@@ -35,7 +36,9 @@ function renderTable() {
 }
 renderTable(); 
 
-document.querySelector('#Averages').addEventListener('click', (e) => {
+const averagesTable = document.querySelector('#Averages');
+if (averagesTable) {
+averagesTable.addEventListener('click', (e) => {
     if (e.target.classList.contains('delete-row')) {
         const row = e.target.closest('tr');
 
@@ -87,6 +90,7 @@ document.querySelector('#Averages').addEventListener('click', (e) => {
     input.value = '';
     }
 });
+};
 
         const Home = document.getElementById('Home');
         const PracRoom = document.getElementById('Practice-Room');
@@ -99,7 +103,7 @@ DistanceInputs.addEventListener('click', () => {
 });
 
 PracRoom.addEventListener('click', () => {
-        window.location.href = 'index.html';
+        window.location.href = '/index.html';
 });
 
 Home.addEventListener('click', () => {
